@@ -2,13 +2,10 @@ import {
   INC_COUNTER,
   ADD_COUNTER,
   DEC_COUNTER,
-  SUB_COUNTER,
-  STORE_RESULT,
-  DELETE_RESULT
-} from "./actionTypes";
+  SUB_COUNTER
+} from "../actionTypes";
 const initialState = {
-  counter: 0,
-  results: []
+  counter: 0
 };
 
 const reducer = (state = initialState, action) => {
@@ -32,20 +29,6 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         counter: state.counter - action.value
-      };
-    case STORE_RESULT:
-      return {
-        ...state,
-        results: state.results.concat(state.counter)
-      };
-    case DELETE_RESULT:
-      let newArray = [
-        ...state.results.slice(0, action.index),
-        ...state.results.slice(action.index + 1)
-      ];
-      return {
-        ...state,
-        results: newArray
       };
     default:
       return state;
