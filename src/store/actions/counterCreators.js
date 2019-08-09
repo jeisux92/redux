@@ -2,9 +2,7 @@ import {
     ADD_COUNTER,
     INC_COUNTER,
     DEC_COUNTER,
-    SUB_COUNTER,
-    STORE_RESULT,
-    DELETE_RESULT
+    SUB_COUNTER
 } from "./actionTypes";
 
 
@@ -16,15 +14,10 @@ const addCounter = (value) => ({ type: ADD_COUNTER, value: value })
 
 const subCounter = (value) => ({ type: SUB_COUNTER, value: value })
 
-const storeResult = () => ({ type: STORE_RESULT })
-
-const deleteResult = (index) => ({ type: DELETE_RESULT, index: index })
 
 export {
     incCounter,
     decCounter,
     addCounter,
-    subCounter,
-    storeResult,
-    deleteResult
+    subCounter
 }
