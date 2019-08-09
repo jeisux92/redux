@@ -5,14 +5,13 @@ import {
     SUB_COUNTER
 } from "./actionTypes";
 
+const incCounter = () => ({ type: INC_COUNTER });
 
-const incCounter = () => ({ type: INC_COUNTER })
+const decCounter = () => ({ type: DEC_COUNTER });
 
-const decCounter = () => ({ type: DEC_COUNTER })
+const addCounter = value => ({ type: ADD_COUNTER, value: value });
 
-const addCounter = (value) => ({ type: ADD_COUNTER, value: value })
-
-const subCounter = (value) => ({ type: SUB_COUNTER, value: value })
+const subCounter = value => ({ type: SUB_COUNTER, value: value });
 
 
 export {

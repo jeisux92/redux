@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { connect } from "react-redux";
-import CounterControl from '../../components/CounterControl/CounterControl';
-import CounterOutput from '../../components/CounterOutput/CounterOutput';
+import CounterControl from "../../components/CounterControl/CounterControl";
+import CounterOutput from "../../components/CounterOutput/CounterOutput";
 import {
     incCounter,
     decCounter,
@@ -14,9 +14,9 @@ import {
     deleteResult
 } from "../../store/actions/resultCreators";
 class Counter extends Component {
-    state = {
-        counter: 0
-    }
+  state = {
+    counter: 0
+  };
 
     render() {
         return (
@@ -50,4 +50,7 @@ const mapDispatchToProps = dispatch => ({
     onDeleteResult: (index) => dispatch(deleteResult(index))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Counter);
